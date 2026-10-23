@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<title>Informes Solver</title><style>
+body { font-family: Calibri, Arial, sans-serif; background:#f8fafc; padding:30px; }
+.container { max-width:1000px; margin:auto; background:#fff; padding:30px; border:1px solid #cbd5e1; }
+h1 { color:#1e3a8a; font-size:22px; }
+h3 { color:#334155; font-size:15px; margin-top:20px; }
+table { width:100%; border-collapse:collapse; margin-top:10px; font-size:14px; }
+th { background:#1e3a8a; color:#fff; text-align:right; padding:8px 12px; border:1px solid #94a3b8; }
+td { padding:7px 12px; border:1px solid #cbd5e1; text-align:right; color:#334155; }
+th:first-child, th:nth-child(2), td:first-child, td:nth-child(2) { text-align:left; }
+tr:nth-child(even) { background:#f1f5f9; }
+</style></head><body><div class="container">
+
+<h1>Informe de respuestas</h1>
+<h3>Celda objetivo</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Celda objetivo</th>
+      <th>Tipo</th>
+      <th>Valor original</th>
+      <th>Valor final</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rendimiento total</td>
+      <td>Máximo</td>
+      <td>0.00</td>
+      <td>1,060,000.00</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Celdas de variables</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Variable</th>
+      <th>Nombre Celda</th>
+      <th>Valor original</th>
+      <th>Valor final</th>
+      <th>Entero</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>x1</td>
+      <td>Apple Inc.</td>
+      <td>0.00</td>
+      <td>800,000.00</td>
+      <td>Continuo</td>
+    </tr>
+    <tr>
+      <td>x2</td>
+      <td>Microsoft Corp.</td>
+      <td>0.00</td>
+      <td>1,200,000.00</td>
+      <td>Continuo</td>
+    </tr>
+    <tr>
+      <td>x3</td>
+      <td>Amazon.com Inc.</td>
+      <td>0.00</td>
+      <td>4,800,000.00</td>
+      <td>Continuo</td>
+    </tr>
+    <tr>
+      <td>x4</td>
+      <td>Alphabet Inc</td>
+      <td>0.00</td>
+      <td>400,000.00</td>
+      <td>Continuo</td>
+    </tr>
+    <tr>
+      <td>x5</td>
+      <td>Tesla Inc.</td>
+      <td>0.00</td>
+      <td>800,000.00</td>
+      <td>Continuo</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Restricciones</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Restricción</th>
+      <th>Valor de la celda</th>
+      <th>Fórmula</th>
+      <th>Estado</th>
+      <th>Divergencia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apple Inc. &gt;= 800k</td>
+      <td>800,000.00</td>
+      <td>&gt;= 800,000.00</td>
+      <td>Vinculante</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Microsoft Corp. &gt;= 1200k</td>
+      <td>1,200,000.00</td>
+      <td>&gt;= 1,200,000.00</td>
+      <td>Vinculante</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Amazon.com Inc.  &gt;= 1600k</td>
+      <td>4,800,000.00</td>
+      <td>&gt;= 1,600,000.00</td>
+      <td>No vinculante</td>
+      <td>3,200,000.00</td>
+    </tr>
+    <tr>
+      <td>Alphabet Inc. &gt;= 400k</td>
+      <td>400,000.00</td>
+      <td>&gt;= 400,000.00</td>
+      <td>Vinculante</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Tesla Inc. &gt;= 800k</td>
+      <td>800,000.00</td>
+      <td>&gt;= 800,000.00</td>
+      <td>Vinculante</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Presupuesto total = 8000k</td>
+      <td>8,000,000.00</td>
+      <td>= 8,000,000.00</td>
+      <td>Vinculante</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 style="margin-top:50px">Informe de sensibilidad</h1>
+<h3>Celdas de variables</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Variable</th>
+      <th>Nombre Celda</th>
+      <th>Valor Final</th>
+      <th>Costo Reducido</th>
+      <th>Coef. Objetivo</th>
+      <th>Aumento Permisible</th>
+      <th>Disminución Permisible</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>x1</td>
+      <td>Apple Inc.</td>
+      <td>800,000.00</td>
+      <td>0.00</td>
+      <td>0.12</td>
+      <td>0.03</td>
+      <td>1E+30</td>
+    </tr>
+    <tr>
+      <td>x2</td>
+      <td>Microsoft Corp.</td>
+      <td>1,200,000.00</td>
+      <td>0.00</td>
+      <td>0.10</td>
+      <td>0.05</td>
+      <td>1E+30</td>
+    </tr>
+    <tr>
+      <td>x3</td>
+      <td>Amazon.com Inc.</td>
+      <td>4,800,000.00</td>
+      <td>0.00</td>
+      <td>0.15</td>
+      <td>1E+30</td>
+      <td>0.03</td>
+    </tr>
+    <tr>
+      <td>x4</td>
+      <td>Alphabet Inc</td>
+      <td>400,000.00</td>
+      <td>0.00</td>
+      <td>0.09</td>
+      <td>0.06</td>
+      <td>1E+30</td>
+    </tr>
+    <tr>
+      <td>x5</td>
+      <td>Tesla Inc.</td>
+      <td>800,000.00</td>
+      <td>0.00</td>
+      <td>0.11</td>
+      <td>0.04</td>
+      <td>1E+30</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Restricciones</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Restricción</th>
+      <th>Valor Final (LHS)</th>
+      <th>Precio Sombra</th>
+      <th>Lado Derecho (RHS)</th>
+      <th>Aumento Permisible</th>
+      <th>Disminución Permisible</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apple Inc. &gt;= 800k</td>
+      <td>800,000.00</td>
+      <td>-0.03</td>
+      <td>800,000.00</td>
+      <td>3,200,000.00</td>
+      <td>800,000.00</td>
+    </tr>
+    <tr>
+      <td>Microsoft Corp. &gt;= 1200k</td>
+      <td>1,200,000.00</td>
+      <td>-0.05</td>
+      <td>1,200,000.00</td>
+      <td>3,200,000.00</td>
+      <td>1,200,000.00</td>
+    </tr>
+    <tr>
+      <td>Amazon.com Inc.  &gt;= 1600k</td>
+      <td>4,800,000.00</td>
+      <td>0.00</td>
+      <td>1,600,000.00</td>
+      <td>3,200,000.00</td>
+      <td>1E+30</td>
+    </tr>
+    <tr>
+      <td>Alphabet Inc. &gt;= 400k</td>
+      <td>400,000.00</td>
+      <td>-0.06</td>
+      <td>400,000.00</td>
+      <td>3,200,000.00</td>
+      <td>400,000.00</td>
+    </tr>
+    <tr>
+      <td>Tesla Inc. &gt;= 800k</td>
+      <td>800,000.00</td>
+      <td>-0.04</td>
+      <td>800,000.00</td>
+      <td>3,200,000.00</td>
+      <td>800,000.00</td>
+    </tr>
+    <tr>
+      <td>Presupuesto total = 8000k</td>
+      <td>8,000,000.00</td>
+      <td>0.15</td>
+      <td>8,000,000.00</td>
+      <td>1E+30</td>
+      <td>3,200,000.00</td>
+    </tr>
+  </tbody>
+</table>
+
+</div></body></html>
